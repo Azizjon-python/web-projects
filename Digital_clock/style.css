@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.timer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+.circle-container {
+    transform: rotate(-90deg);
+}
+
+.circle-background {
+    fill: none;
+    stroke: #444;
+    stroke-width: 10;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: #f24e6b;
+    stroke-width: 10;
+    stroke-dasharray: 440; /* Doira uzunligi */
+    stroke-dashoffset: 440; /* Boshlanish nuqtasi */
+    transition: stroke-dashoffset 1s linear; /* Progress smooth animatsiyasi */
+}
+
+.time-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
